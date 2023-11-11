@@ -29,6 +29,11 @@ $(document).ready(function () {
         `);
         // Находим кнопку удаления внутри элемента списка и добавляем обработчик события
         listItem.find('.remove-button').on('click', function () {
+            $('#window').modal('show');
+            // listItem.remove();
+        });
+
+        $('#delte').on('click', function () {
             listItem.remove();
         });
 
@@ -37,6 +42,10 @@ $(document).ready(function () {
         taskInput.val('');
 
     }
+
+    // $('#launcher').on('click', function () {
+       
+    // });
 });
 
 
