@@ -24,28 +24,23 @@ $(document).ready(function () {
 
         // Создаем новый элемент списка с помощью jQuery
         const listItem = $('<li></li>');
-        listItem.html(`<span>${taskText}</span>
+        listItem.html(`<span class = 'list-text'>${taskText}</span>
         <button class='remove-button'>Удалить</button>
         `);
         // Находим кнопку удаления внутри элемента списка и добавляем обработчик события
         listItem.find('.remove-button').on('click', function () {
             $('#window').modal('show');
-            // listItem.remove();
         });
 
-        $('#delte').on('click', function () {
+        $('#delete').on('click', function () {
             listItem.remove();
+            $('#window').modal('hide');
         });
 
         // Добавляем элемент в список и очищаем поле ввода
         taskList.append(listItem);
         taskInput.val('');
-
-    }
-
-    // $('#launcher').on('click', function () {
-       
-    // });
+    };
 });
 
 

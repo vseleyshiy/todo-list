@@ -10,6 +10,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    row-gap: 10px;
 }
 
 
@@ -19,22 +20,38 @@ body {
 
 .tasks {
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
 }
 
-input[type = 'text'] {
-    height: 50px;
+input[type='text'] {
+    height: 40px;
 }
 
 #add-button {
     background-color: rgb(150, 150, 255);
-    height: 50px;
+    border-radius: 3px;
+    height: 40px;
 }
 
+.todo-list {}
+
 li {
-    background-color: aqua;
+    text-decoration: none;
+    list-style: none;
+    padding: 5px;
+}
+
+.list-text {
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 3px;
 }
 
 .remove-button {
-    background-color: aqua;
-    height: 50px;
+    background-color: rgb(182, 182, 255);
+    height: 30px;
+    border-radius: 3px;
 }
